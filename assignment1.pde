@@ -16,5 +16,9 @@ void draw(){
   rotate(r);
   image(tri, 0, 0);
   popMatrix();
-  r-=0.3;
+  if (mousePressed == true){
+    r=0;}
+  else{
+    r-=0.3;}
+  
 }
