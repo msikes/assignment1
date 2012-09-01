@@ -1,18 +1,20 @@
-
 PImage tri;
 float r;
 float transX;
 float transY;
+int fade=50;
 
 void setup(){
   size(600,600);
-  tri = loadImage("triangle.gif");
+  background(255);
+  tri = loadImage("triangle.png");
   imageMode(CENTER);
  
 }
 
 void draw(){
-  background(255);
+  fill(255, fade);
+  rect(0,0,600,600);
   pushMatrix();
   translate(transX, transY);
   rotate(r);
@@ -23,6 +25,5 @@ void draw(){
     transX=mouseX;
     transY=mouseY; }
   else{
-    r-=0.3;}
-  
+    r-=0.1;}
 }
