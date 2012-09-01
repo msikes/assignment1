@@ -1,6 +1,8 @@
 
 PImage tri;
 float r;
+float transX;
+float transY;
 
 void setup(){
   size(600,600);
@@ -12,12 +14,14 @@ void setup(){
 void draw(){
   background(255);
   pushMatrix();
-  translate(mouseX, mouseY);
+  translate(transX, transY);
   rotate(r);
   image(tri, 0, 0);
   popMatrix();
   if (mousePressed == true){
-    r=0;}
+    r=0;
+    transX=mouseX;
+    transY=mouseY; }
   else{
     r-=0.3;}
   
